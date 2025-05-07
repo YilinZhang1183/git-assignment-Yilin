@@ -7,4 +7,4 @@ editor: visual
 
 ## Introduction
 
-This guide describes the steps and relevant explains I took to complete the Git assignment2.
+This guide documents the detailed steps I followed to complete Git Assignment 2. (main)
