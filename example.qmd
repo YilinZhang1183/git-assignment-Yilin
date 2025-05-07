@@ -7,4 +7,76 @@ editor: visual
 
 ## Introduction
 
-This guide documents the detailed steps I followed to complete Git Assignment 2. (main)
+This guide describes the steps and relevant explanations I took to complete the Git assignment 2.
+
+## Step 1: Create New Rstudio Project
+
+Create a new Rstudio project called "git-assignment".
+
+-   Open RStuido
+
+-   Go to the File, open New Project, open New Directory, open New Project.
+
+-   Name the new project ' git-assignment'.
+
+## Step 2: Create New qmd File
+
+In this new folder, create a new qmd file named example.qmd, and write an introduction. Finally, try to knit this file.
+
+-   In the RStudio, go to the File, open New File, open Quarto Document.
+
+-   Fill out the title and author.
+
+-   Save the file as ' example.qmd'.
+
+-   Click Knit to generate the initial HTML output.
+
+## Step 3:  Initialize Git Repository
+
+Execute the following command lines in the terminal, to find the project folder, then initialize the repository, add files, and finally submit.
+
+``` bash
+cd /c/Users/asus/Desktop/git-assignment
+git init
+git add .
+git commit -m "Initial commit with example.qmd"
+```
+
+### Command Explanations
+
+-   cd /c/Users/asus/Desktop/git-assignment : Navigate to the new project folder.
+
+-   git init : Initialize a new Git repository.
+
+-   git add . : Add all files to the staging area so they can be commited.
+
+-   git commit -m "Initial commit with example.qmd" : Commit the staged files with a message summarizing the purpose of the commit.
+
+## Step 4: Connect to Github
+
+Connect the local repository and the remote GitHub repository through the following commands.
+
+``` bash
+git remote add origin https://github.com/YilinZhang1183/git-assignment-Yilin.git
+git branch -M main
+git push -u origin main
+```
+
+### Command Explanation
+
+-   git remote add origin <https://github.com/YilinZhang1183/git-assignment-Yilin.git>: Connect the local repository to the remote GitHub repository by adding a remote origin, so that future pushes and pulls the main branch.
+
+-   git branch -M main : Rename the branch to main, to align the name and avoid push failure.
+
+-   git push -u origin main : Push the local main branch to the remote repository, and set up tracking between the local and remote branches.
+
+## Step 5: Create and Work on a New Branch
+
+Create a new branch named testbranch and switch to it. Modify the file example.qmd and commit the changed file.
+
+``` bash
+git checkout -b testbranch
+git add example.qmd
+git commit -m "Add new changes in testbranch"
+```
+
